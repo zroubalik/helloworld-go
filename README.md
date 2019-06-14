@@ -1,3 +1,13 @@
+## Run on OpenShift using Docker Build Strategy
+
+  ```shell
+  oc new-project test
+  oc new-build https://github.com/zroubalik/helloworld-go.git --strategy=docker --name=helloworld
+  oc apply -f service.yaml
+  ```
+
+
+
 A simple web app written in Go that you can use for testing. It reads in an env
 variable `TARGET` and prints `Hello ${TARGET}!`. If `TARGET` is not specified,
 it will use `World` as the `TARGET`.

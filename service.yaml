@@ -2,7 +2,7 @@ apiVersion: serving.knative.dev/v1alpha1
 kind: Service
 metadata:
   name: helloworld-go
-  namespace: default
+  namespace: test
 spec:
   template:
     spec:
