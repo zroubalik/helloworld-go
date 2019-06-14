@@ -3,6 +3,8 @@
 # https://hub.docker.com/_/golang
 FROM golang:1.12 as builder
 
+ENV HOME=/
+
 # Copy local code to the container image.
 WORKDIR /go/src/github.com/knative/docs/helloworld
 COPY . .

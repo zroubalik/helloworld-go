@@ -7,7 +7,8 @@ spec:
   template:
     spec:
       containers:
-      - image: docker.io/{username}/helloworld-go
+      - image: image-registry.openshift-image-registry.svc:5000/test/helloworld
+        env:
         env:
         - name: TARGET
           value: "Go Sample v1"
